@@ -75,6 +75,22 @@ const App = () => {
     })
   }
 
+    var maxDate;
+  const deadlineLimit = (maxDate)=>{
+    var dtToday = new Date();
+ 
+    var month = dtToday.getMonth() + 1;
+    var day = dtToday.getDate();
+    var year = dtToday.getFullYear();
+    if(month < 10)
+        month = '0' + month.toString();
+    if(day < 10)
+        day = '0' + day.toString();
+    
+     maxDate = year + '-' + month + '-' + day;
+     return maxDate;
+};
+
 
   return (
     <>
@@ -97,7 +113,7 @@ const App = () => {
               onChange={(e) => {
                 setdescription(e.target.value)
               }} />
-            <input type="date" name="deadLine" id="deadLine" className=' lg:w-40 md:w-28 sm:w-20 md:h-12 h-10 sm:text-sm p-4 md:m-7 m-3 rounded-lg border-slate-600 border-2'
+            <input type="date" name="deadLine" id="deadLine" min={deadlineLimit(maxDate)} className=' lg:w-40 md:w-28 sm:w-20 md:h-12 h-10 sm:text-sm p-4 md:m-7 m-3 rounded-lg border-slate-600 border-2'
               value={date}
               onChange={(e) => {
                 setdate(e.target.value)
@@ -121,7 +137,7 @@ const App = () => {
               onChange={(e) => {
                 setdescription(e.target.value)
               }} />
-            <input type="date" name="deadLine" id="deadLine" className='w-10/12 ml-10 mb-3 h-10 text-center rounded-lg border-slate-600 border-2'
+            <input type="date" name="deadLine" id="deadLine" min={deadlineLimit(maxDate)} className='w-10/12 ml-10 mb-3 h-10 text-center rounded-lg border-slate-600 border-2'
               value={date}
               onChange={(e) => {
                 setdate(e.target.value)
