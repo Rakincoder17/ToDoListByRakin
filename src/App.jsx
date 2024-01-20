@@ -152,7 +152,7 @@ const App = () => {
           <a href="https://www.facebook.com/profile.php?id=100085463775808" target='_blank' className=' text-blue-400 hover:text-blue-600 font-bold'>Facebook</a>
           <a href="https://www.instagram.com/rakin_absar_04/" target='_blank' className=' text-red-500 hover:text-red-700 font-bold'>Instagram</a>
           <a href="https://www.linkedin.com/in/rakinabsar04/" target='_blank' className=' text-blue-700 hover:text-blue-500 font-bold'>Linkedin</a>
-          <a href="https://www.linkedin.com/in/rakinabsar04/" target='_blank' className=' text-slate-500 hover:text-slate-300 font-bold'>GitHub</a>
+          <a href="https://github.com/Rakincoder17" target='_blank' className=' text-slate-500 hover:text-slate-300 font-bold'>GitHub</a>
         </footer>
       </div>
     </>
